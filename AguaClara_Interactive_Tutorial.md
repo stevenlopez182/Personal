@@ -168,11 +168,15 @@ For larger code blocks where you report multiple lines of code, you always start
 
 1. Below, write a Python print function with a different string using syntax highlighting:
 
-<!--- Fill you answer here. --->
+print('this tutorial is so long')
 
 2. Now write a block of Python code for that same print statement:
 
-<!--- Fill you answer here. --->
+```python 
+
+print('this tutorial is so long')
+
+```
 
 
 
@@ -183,7 +187,7 @@ $$ Re_D = \frac{uD}{\nu} $$
 
 1. Try it on your own! Write your favorite equation using LaTeX source code and toggle the LaTeX preview to see it formatted:
 
-<!--- Fill you answer here. --->
+$$ A & = \frac{\pi r^2}{2} $$
 
 
 # Using Python and Running it With Hydrogen in Markdown
