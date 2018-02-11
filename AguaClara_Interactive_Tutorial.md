@@ -222,40 +222,47 @@ plt.show()
 These questions are meant to test what you've learned from the Python Basics tutorial. If you need help answering a question, refer there first and use other online resources before seeking a Subteam Lead or RA. Be sure to run all your code with Hydrogen. When you code, make sure your using proper [variable naming](https://github.com/AguaClara/aide_design/wiki/Variable-Naming) and [coding standards](https://github.com/AguaClara/aide_design/wiki/Standards)
 
 1. Write a conditional statement with 3 conditions: when x is 10, when x is 1, and when x is anything other than 1 or 10. For each condition, have your code print what the value is or isn't.
-
-<!--- Fill you answer here. --->
-
-
-
+```Python
+if x == 1:
+  print('x is 1')
+elif X == 10:
+  print('x is 10')
+else:
+  print('x is neither 1 nor 10') 
+```
 
 2. Write a `for` loop that takes a variable with an initial value of 0, and adds the current index to the previous value of that variable (i.e. you variable should grow in size every iteration). Perform the iteration 20 times, and have the final value be printed at the end.
-
-<!--- Fill you answer here. --->
-
-
-
-
-
-
+```Python
+i=0;
+for i in range(20):
+  i=i+1
+  
+print(i)
+```
 
 
 
 3. Using the NumPy package, calculate the value of sin(4), and use the sigfig function from the utility module in aide_design to get your answer to 3 sig-figs. *(Hint: You will need to import these packages. Remember how to do that?)*
 
-<!--- Fill you answer here. --->
-
-
+```Python
+import NumPy as m
+myValue= round_sig(m.sin(4))
+```
 
 4. Create a `list` of length 5, and verify the length of your list. Once you've done that, turn your `list` into an `array` and apply units of meters to it. After that, create a 5x5 `array`, extract the middle row and middle column. Verify the size of your 2D `array` and apply units of liters to it.
 
-<!--- Fill you answer here. --->
-
-
-
-
-
-
-
+```Python
+import NumPy as np
+myList = [0, 1, 2, 3, 4]
+len(myList)
+myArray = np.array(myList)
+myArrayUnits = myArray * u.m
+my2DArray = np.array([[1 ,2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]. [1, 2, 3, 4, 5]])
+my2DArray[:,1]
+my2DArray[1,:]
+len(my2DArray)
+my2DArrayUnits = my2DArray * u.l
+```
 
 
 5.  One of the most famous equations for a particle diffusing through a liquid at low Reynolds Number is the Stokes-Einstein Equation where k<sub>B</sub> is the Boltzmann constant, T is the temperature in Kelvin, eta is the dynamic viscosity in kg/(m*s), and r is the particle radius. Write a function that takes a temperature in Kelvin, a particle radius in meters, and a viscosity of water to calculate the diffusion coefficient D.
@@ -271,13 +278,38 @@ from scipy.constants import Boltzmann as kB_sc # I've imported the unitless valu
 
 kB = kB_sc * u.joule / u.kelvin # I've given kB units for you in J/K; you can use the kB variable to give you Boltzmann's constant with units
 
-# Write your code here
+def Diff(T,eta,r)
+ T=T*u.kelvin
+ r=r*u.m
+ eta=eta*(u.kg/ (u.m * u.s))
+ return ((T*kB)/(6*eta*r*math.pi))
 
 ```
 
 6. You have a pipe with a radius of 0.2 m with water flowing in it at 2 m<sup>3</sup>/s. You want to see how the Reynolds Number changes as viscosity changes due to a change in temperature from 0 to 200<sup>o</sup>C. Create a plot of Reynolds Number against Temperature in Kelvin to show a relationship. Make sure your plot has a title, labeled axes, and axes grid. You can use functions from `physchem` like `pc.re_pipe` and `pc.viscosity_kinematic`. *(Hint: Make an array of temperatures to input into the `pc.viscosity_kinematic` function)*. Make sure to save you plot to your images folder in your personal repository.
 
-<!--- Fill you answer here. --->
+
+
+xArray = u.Quantity(np.arange(0, 200, 1), u.kelvin)
+
+@u.wraps(None, [u.m / u.s, u.m, u.m ** 2 / u.s], False)
+def re_flat_plate(velocity, dist, nu):
+  """This function calculates the Reynolds Number for flow past a plate using fluid velocity, plate length, and kinematic viscosity."""
+  return (velocity * dist / nu)
+
+plt.plot(1*velocity * distance/ pc.viscosity_kinematic(xarray * u.kelvin))
+plt.xlabel('Temperature')
+plt.ylabel('Reynolds Number')
+plt.title('Re vs T')
+plt.minorticks_on()
+plt.grid(which = 'major')
+plt.grid(which = 'minor')
+plt.legend(loc = 'lower right', ncol = 1)
+plt.tight_layout()
+plt.savefig('./Images/Revst.png')
+plt.show()
+
+
 
 # Teletype Basics
 In this section you and your team can practice using Teletype together.
