@@ -18,8 +18,7 @@ You can find a GitHub tutorial [here](https://github.com/AguaClara/aguaclara_tut
 
 1. Below this, write a sentence or two about yourself:
 
-<!--- Fill you answer here. --->
-
+I was born and raised in Hackensack New Jersey. I have an older brother who is four years older than I am. 
 
 
 
@@ -44,7 +43,7 @@ To signify a header, use `#`. The more `#` you use, the smaller the header gets.
 
 1. Make a header of similar size as Header 3 with whatever text you want:
 
-<!--- Fill you answer here. --->
+### The Lopez Experience
 
 ## Emphasis
 There are several different ways to emphasize text: *italics*, **bold**, ***combined***, and ~~strikethrough~~.
@@ -56,7 +55,7 @@ There are several different ways to emphasize text: *italics*, **bold**, ***comb
 
 1. Write 4 of your favorite words using each type of emphasis:
 
-<!--- Fill you answer here. --->
+*Azeotrope* **Sphincter** ***bubbles*** ~~piglet~~
 
 
 ## Lists
@@ -68,7 +67,9 @@ Lists are very easy to do. For a bulleted list, use the asterisk and for a numbe
 
 1. Now try it out for yourself. Write down a list of things you hope to achieve this semester, and elaborate on them with sub items:
 
-<!--- Fill you answer here. --->
+1. Do well this semester
+2. do a lot of research
+  -AguaClara and personal
 
 ## Images
 To input images, you'll either need an image URL or a file path to your image. For AguaClara work, your repository should have a folder for images where you can get an image URL or file path from. In this tutorial, I've made an image folder with a picture in the `aguaclara_tutorial` repository.
@@ -103,7 +104,7 @@ Image with Height and Width Adjusted:
 <!--- Fill you answer here. --->
 
 
-
+![toffee](https://github.com/stevenlopez182/Personal2/blob/master/Images/IMG_2830.JPG?raw=true)
 
 
 ## Links
