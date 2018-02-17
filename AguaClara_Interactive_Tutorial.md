@@ -319,9 +319,9 @@ In this section you and your team can practice using Teletype together.
 My Portal ID:
 3088ed8c-6e46-42b3-8576-2928dcc94db6
 
+you have 53 minutes to submit this assignment I believe in you! - maile
 
-
-
+help -maile
 
 2. Have you other team members create a portal for you to join. In their Markdown file, write them something encouraging, and sign your name.
 
